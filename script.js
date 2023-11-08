@@ -1,3 +1,21 @@
+// Question 1 
+function createHelloWorld (){
+  return function (){
+    return "hello world"
+  }
+}
+
+let f = createHelloWorld()
+console.log(f(2));
+
+// Question 2 
+
+let arr1 = [5,6,7,8,9,10]
+
+let arr2 = arr1.map((x)=> x**2) 
+console.log(arr2);
+
+//Question 3
 var debounce = function(fn, t) {
     let timeoutId; // store the timeout ID
   

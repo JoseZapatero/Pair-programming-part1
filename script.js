@@ -31,4 +31,15 @@ var debounce = function(fn, t) {
   const log = debounce(console.log, );
   log('Hello'); // execution cancelled
   log('Hello'); // execution cancelled
-  log('Hello'); // 'Hello' will be logged after a delay of 100ms  
+  log('Hello'); // 'Hello' will be logged after a delay of 100ms   
+
+  //Thursday Question
+
+// Question 1  
+
+function createMultiplyer (value){
+  return value * 5 
+} 
+
+console.log(createMultiplyer(10)); 
+

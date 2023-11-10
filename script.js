@@ -1,24 +1,3 @@
-
-// Question 1
-function createHelloWorld() {
-  return function () {
-    return "hello world";
-  };
-}
-
-
-
-// Question 2
-
-let arr1 = [5, 6, 7, 8, 9, 10];
-
-let arr2 = arr1.map((x) => x ** 2);
-console.log(arr2);
-
-// Question 3
-
-function debounce(fn, t) {
-
 // Question 1 
 function createHelloWorld() {
   return function () {
@@ -50,7 +29,7 @@ var debounce = function (fn, t) {
   };
 }
 
-const log = debounce(console.log);
+const log = debounce(console.log, 900);
 log("Hello"); // execution cancelled
 log("Hello"); // execution cancelled
 log("Hello"); // 'Hello' will be logged after a delay of 100ms;
@@ -87,33 +66,6 @@ console.log(bookshelf.getTotalBooks()); // 3
 bookshelf.removeBook("To Kill a Mockingbird"); 
 console.log(bookshelf.getTotalBooks()); // 2 
 console.log(bookshelf.books);
-
-
-
-
-function expect(val){
-  return function(){
-
-  
-  }
-}
-};
-
-const log = debounce(console.log,);
-log('Hello'); // execution cancelled
-log('Hello'); // execution cancelled
-log('Hello'); // 'Hello' will be logged after a delay of 100ms   
-
-//Thursday Question
-
-// Question 1  
-
-function createMultiplyer(value) {
-  return value * 5
-}
-
-console.log(createMultiplyer(10));
-
 
 //Q3
 

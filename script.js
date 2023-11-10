@@ -69,26 +69,28 @@ console.log(bookshelf.books);
 
 //Q3
 
-let expect = (val) => {
+function expect(val) {
+  return {
+    toBe: function (val2) {
+      if (val === val2) {
+        return "value: true"
+      } else {
+        throw new Error("Not equal")
+      }
+    },
 
-  let toBe = (val2) => {
-    if (val === val2) {
-      return "value: true"
-    } else {
-      throw new Error("Not equal")
+    notToBe: function (val2) {
+      if (val === val2) {
+        throw new Error("They are equal")
+      } else {
+        return "value: true"
+      }
     }
   }
-
-  let notToBe = (val2) => {
-    if (val === val2) {
-      throw new Error("They are equal")
-    } else {
-      return "value: true"
-    }
-  }
-  
-  return {}
-} 
+}
+console.log(expect(5).notToBe(9));
+// console.log(expect(5).toBe(9)); 
+console.log(expect(5).toBe(5));
 
 console.log(expect(5).notToBe(5));
 

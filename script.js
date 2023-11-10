@@ -1,3 +1,4 @@
+
 // Question 1
 function createHelloWorld() {
   return function () {
@@ -17,6 +18,27 @@ console.log(arr2);
 // Question 3
 
 function debounce(fn, t) {
+
+// Question 1 
+function createHelloWorld() {
+  return function () {
+    return "hello world"
+  }
+}
+
+let f = createHelloWorld()
+console.log(f(2));
+
+// Question 2 
+
+let arr1 = [5, 6, 7, 8, 9, 10]
+
+let arr2 = arr1.map((x) => x ** 2)
+console.log(arr2);
+
+//Question 3
+var debounce = function (fn, t) {
+
   let timeoutId; // store the timeout ID
 
   return function (...args) {
@@ -75,3 +97,46 @@ function expect(val){
   
   }
 }
+};
+
+const log = debounce(console.log,);
+log('Hello'); // execution cancelled
+log('Hello'); // execution cancelled
+log('Hello'); // 'Hello' will be logged after a delay of 100ms   
+
+//Thursday Question
+
+// Question 1  
+
+function createMultiplyer(value) {
+  return value * 5
+}
+
+console.log(createMultiplyer(10));
+
+
+//Q3
+
+let expect = (val) => {
+
+  let toBe = (val2) => {
+    if (val === val2) {
+      return "value: true"
+    } else {
+      throw new Error("Not equal")
+    }
+  }
+
+  let notToBe = (val2) => {
+    if (val === val2) {
+      throw new Error("They are equal")
+    } else {
+      return "value: true"
+    }
+  }
+  
+  return {}
+} 
+
+console.log(expect(5).notToBe(5));
+
